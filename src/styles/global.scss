@@ -2,6 +2,7 @@
   --white: #fff;
   --gray-100: #e1e1e6;
   --gray-300: #a8a8b3;
+  --gray-700: #323238;
   --gray-800: #29292e;
   --gray-850: #1f2729;
   --gray-900: #121214;
@@ -14,6 +15,16 @@
   padding: 0;
 
   box-sizing: border-box;
+}
+
+html {
+  @media (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+
+  @media (max-width: 720px) {
+    font-size: 87.5%;
+  }
 }
 
 body {
@@ -38,16 +49,4 @@ a {
 
 button {
   cursor: pointer;
-}
-
-@media (max-width: 720px) {
-  html {
-    font-size: 87.5%;
-  }
-}
-
-@media (max-width: 1080px) {
-  html {
-    font-size: 93.75%;
-  }
 }
