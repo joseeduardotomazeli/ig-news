@@ -38,7 +38,7 @@ async function webhooks(request: NextApiRequest, response: NextApiResponse) {
       event = stripe.webhooks.constructEvent(
         requestBuffer,
         stipeSignature,
-        process.env.STRIPE_WEBHOOKS_SECRET
+        process.env.STRIPE_WEBHOOKS_KEY
       );
     } catch (err) {
       return response.status(400).send(`Webhooks error: ${err.message}.`);
